@@ -2,7 +2,7 @@
   font-family: monospace;
   background-color:rgb(0, 186, 75);
   text-align: center;
-
+--hill-color:#5C4033;
 }
 
 .title-font{
@@ -97,7 +97,7 @@ label{
 }
 
 #ground{
-  height:100px;
+  height:250px;
   background-color:rgb(0, 186, 75);
   margin-top:0;
   margin-left:-10%;
@@ -106,44 +106,43 @@ label{
   position: fixed;top:300px;
 }
 
-.hill-1{
+.hill{
   height:250px;
   width:250px;
-  background-color:#5C4033;
+  background-color:var(--hill-color);
   margin-left:0px;
   position: fixed;top:175px;left:50%;
   transform: rotate(45deg);
   border-width: 15px;
   border-radius: 25px;
-  border-color: #5C4033;
+  border-color: var(--hill-color);
   border-style: solid;
 }
 
-#hill-2{
-  height:325px;
-  width:325px;
-  background-color:#5C4033;
-  margin-left:100px;
-  position: fixed;top:125px;left:50%;
-  transform: rotate(45deg);
-  border-width: 15px;
-  border-radius: 25px;
-  border-color: #5C4033;
-  border-style: solid;
-}
 
-#body-ribbon{
-  background-color: rgb(0, 186, 75);
-  width:120%;
-  min-height: 195px;
-  margin-left:-10%;
-  position: fixed;top:350px;
+#welcome-ribbon{
+  color:blue;
+  padding:5px;
+  margin-bottom: 5px;
+  position:relative;
 }
 
 h1{  
   color:blue;
-  font-size: 20px;
   padding:5px;
+}
+
+@media (max-width: 320px) {
+
+  h1{
+    font-size:15px;
+  }
+}
+@media (min-width: 321px) {
+
+  h1{
+    font-size:20px;
+  }
 }
 
 .main-body{
@@ -155,4 +154,5 @@ h1{
   border-style: solid;
   margin-bottom: 5px;
   background-color: lightgreen;
+  position:relative;
 }

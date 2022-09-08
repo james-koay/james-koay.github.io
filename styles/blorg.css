@@ -1,0 +1,187 @@
+
+
+/* blorg the blog bog monster WIP */
+
+
+.blorg{
+  --blorg-skin: rgb(84, 84, 84);
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 5%;
+  width: 50vw;
+  height: 50vw;
+}
+
+.blorg-body{
+  top: 0%;
+  left: 0%;
+  background: var(--blorg-skin,gray);
+  width: 100%;
+  height: 100%;
+  border-radius: 15% 15% 15% 15%;
+  position: absolute;
+}
+
+.right-arm{
+  top: 15%;
+  left: -45%;
+  background: var(--blorg-skin, gray);
+  width: 60%;
+  height: 10%;
+  border-radius: 30% 30% 30% 30%;
+  transform: rotate(180deg);
+  z-index: -1;
+  position: absolute;
+}
+
+
+.left-arm{
+  top: 5%;
+  left: 85%;
+  background: var(--blorg-skin, gray);
+  width: 60%;
+  height: 10%;
+  border-radius: 30% 30% 30% 30%;
+  transform: rotate(-15deg);
+  z-index: -1;
+  position: absolute;
+}
+
+.right-leg {
+  top: 110%;
+  left: -5%;
+  background: var(--blorg-skin, gray);
+  width: 60%;
+  height: 10%;
+  border-radius: 30% 30% 30% 30%;
+  transform: rotate(90deg);
+  z-index: -1;
+  position: absolute;
+}
+
+.left-leg {
+  top: 110%;
+  left: 65%;
+  background: var(--blorg-skin, gray);
+  width: 60%;
+  height: 10%;
+  border-radius: 30% 30% 30% 30%;
+  transform: rotate(65deg);
+  z-index: -1;
+  position: absolute;
+}
+
+.finger{
+  top: 35%;
+  left: 95%;
+  background: white;
+  width: 25%;
+  height: 20%;
+  border-radius: 0% 70% 70% 0%;
+  z-index: -2222;
+  position: absolute;
+} 
+
+.right-eyelid{
+  top: -12.5%;
+  left: 15%;
+  background: var(--blorg-skin,gray);
+  width: 25%;
+  height: 25%;
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+}
+
+.left-eyelid{
+  top: -12.5%;
+  left: 60%;
+  background: var(--blorg-skin,gray);
+  width: 25%;
+  height: 25%;
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+}
+
+.right-eye{
+  top: 15%;
+  left: 10%;
+  background:white;
+  width: 80%;
+  height: 80%;
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+}
+
+.left-eye{
+  top: 15%;
+  left: 10%;
+  background: white;
+  width: 80%;
+  height: 80%;
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+}
+
+.iris{
+  top: 37.5%;
+  left: 37.5%;
+  background: black;
+  width: 30%;
+  height: 30%;
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+}
+
+.mouth{
+  top: 15%;
+  left: 10%;
+  background: rgb(104, 6, 6);
+  width: 80%;
+  height: 75%;
+  border-radius: 10% 10% 10% 10%;
+  position: absolute;
+  overflow:hidden
+}
+
+
+.tooth{
+  top: -35%;
+  width: 45%;
+  height:45%;
+  rotate: 45deg;
+  transform: skew(30deg,30deg);
+  background: white;
+  position: absolute;
+}
+
+.tongue{
+  top: 60%;
+  left:25%;
+  width: 40%;
+  height:50%;
+  background: rgb(197, 41, 41);
+  border-radius: 40% 40% 40% 40%;
+  position: absolute;
+}
+
+.throat{
+  top: 40%;
+  left:30%;
+  width: 40%;
+  height:50%;
+  background: rgb(31, 10, 10);
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+}
+
+.thigh{
+  top: -55%;
+  left: -20%;
+  background:var(--blorg-skin,gray);
+  width: 80%;
+  height: 250%;
+  border-radius: 40% 40% 40% 40%;
+  transform: rotate(0deg);
+  position: absolute;
+}

@@ -122,9 +122,9 @@ label{
 
 #welcome-ribbon{
   color:blue;
-  padding:5px;
-  margin-bottom: 5px;
-  position:relative;
+  position:fixed;
+  width: 100%;
+  top:350px;
 }
 
 h1{  
@@ -132,20 +132,12 @@ h1{
   padding:5px;
 }
 
-@media (max-width: 320px) {
-
-  h1{
-    font-size:15px;
-  }
-}
-@media (min-width: 321px) {
-
-  h1{
-    font-size:20px;
-  }
-}
-
 .main-body{
+  width: 100%;
+  position: relative;
+}
+
+.main-posts{
   color:blue;
   padding:5px;
   border-width: 3px;
@@ -154,5 +146,87 @@ h1{
   border-style: solid;
   margin-bottom: 5px;
   background-color: lightgreen;
-  position:relative;
+}
+
+@media (max-width: 767px) {
+
+  h1{
+    font-size:15px;
+    margin-top:20px;
+  }
+  .tree{
+    visibility: hidden;
+    position:absolute;
+  }
+}
+
+@media (min-width:768px) and  (max-width:1199px){
+
+  h1{
+    font-size:20px;
+  }
+
+  .main-posts{
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .tree{
+    visibility: hidden;
+    position:absolute;
+  }
+}
+
+@media (min-width:1200px) {
+
+  h1{
+    font-size:20px;
+  }
+
+  .main-posts{
+    margin: 10px;
+    display: inline-block;
+    height:200px;
+    width:200px;
+  }
+
+}
+
+.exit-link{
+  padding:5px;
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: lightgreen;
+  border-style: solid;
+  margin-bottom: 5px;
+  background-color: lightgreen;
+}
+
+.tree{
+  position: absolute;
+  margin: auto;
+  display: block;
+  width: 100px;
+  height: 100px;
+  top:20px;
+}
+
+.tree-trunk{
+  height: 50%;
+  width:15%;
+  background-color: rgb(81, 24, 24);
+  position: absolute;
+  top:50%;
+  left:42.5%;
+}
+
+.tree-leaves{
+  height: 0px;
+  width: 0px;
+  border-width: 0 20px 40px 20px;
+  border-radius: 15px;
+  border-color:transparent transparent brown transparent;
+  border-style: solid;
+  position: absolute;
+  left:29.5px;
 }

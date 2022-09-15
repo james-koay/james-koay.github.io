@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript and the DOM </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+  </head>
+  
+<style>
+  .codeblock{
+    text-align: left;
+    width: 400px;
+    position: relative;
+    background-color: black;
+    color: white;left:50%;
+    margin-left: -200px;
+  }
+</style>
+
+  <body>
+    <h1>Javascript, HTML and the DOM</h1>
+
+    <h3>8th September 2022</h3>
+    
+<p>Hello! in my previous <a href="html-css.html">tech blog</a>, i mentioned how Javascript is like the electrician when you're building a house.</p>
+
+<p>The electrician wires up your house so that the lights turn on when you push a button.</p>
+
+<p>Well today i'll be trying to explain how Javascript works with HTML and CSS in abit more depth.</p>
+
+<p>So first of all, we have three separate files. The .html, .css, and the .js files.</p>
+<p>But how do they talk to each other? Within the HTML file, there are links to whatever .css and .js files that it uses.</p>
+<p>Your web browser reads these links and creates a DOM; Document Object Model, and applies the styling from the CSS file and runs the code in the Javascript file.</p>
+<p>The DOM translates the html file so that it's elements are represented in a way that can be read by the Javascript code - as objects and nodes with a tree-like structure</p>
+<p>This tree-like structure acts like a map for objects so that the Javascript file knows where to find things.</p>
+
+<p>For example, lets say the DOM was a forest and we want to reference a specific leaf on a tree.</p>
+
+<p>It's kind of hard to point out which leaf you're referring to... so we have to describe it like this:</p>
+<p>"It's the 2nd leaf on the 4th branch of tree number 3." We'd denote that in javascript kinda like this: 'tree3.branch4.leaf2'</p>
+
+<br>
+
+<h1>Javascript Programming</h1>
+
+<p>So now that you kinda know how Javascript references things. Lets talk about how the Javascript code works.</p>
+<p>The Javascript code is kinda like the instructions on a recipe. </p>
+<p>How the code is usually read is called the 'Control Flow'.</p>
+<p>It usually reads and executes from top to bottom until it reaches special instrucions like a loop or conditional statement.</p>
+
+<p>Say we have a robot chef. And we want to tell it how to make some hearty soup.</p>
+<p>First need the ingredients. Each ingredient would be an 'Object', and we'll put it into a array called 'vegetables'.</p>
+<p>An array is basically a container for objects. But it can also contain more arrays; like a box inside a box.</p>
+
+<div class="codeblock">
+  <p>vegetables=["Potato","Onion","Carrot","Capsicum"]</p>
+</div>
+
+<p>Then we need to teach our robot chef to chop. Below is an function we can write to 'teach' our robot how to chop things:</p>
+
+<div class="codeblock">
+<p>function chop(thing){
+<br>
+result = "Chopped " + thing
+<br>
+console.log(result)
+<br>
+}
+</div>
+
+<p>Now that it knows how to chop things, we can give it the following command to chop a "Potato": </p>
+
+<div class="codeblock">
+  chop("Potato")
+  </div>
+
+<p>This will return "Chopped Potato" in our console.</p>
+
+<p>But lets say we wanna chop all the vegetables in our list. Instead of giving an instruction to chop for each vegetable,</p>
+<p>We can create a loop:</p>
+
+<div class="codeblock">
+  vegetables.forEach(vegetable=> chop(vegetable))
+  </div>
+
+<p>This loop will execute the chop function for each item in the vegetable list. It will return in our console:
+    <br>
+    "Chopped Potato" 
+    <br>
+    "Chopped Onion"
+    <br>
+    "Chopped Carrot"
+    <br>
+    "Chopped Capsicum"
+ </p>
+
+<p>We can then throw that loop into another function and maybe add some meat and do the same:</p>
+
+<div class="codeblock">
+
+meats=["Beef","Pork"]<br>
+<br>
+function prepareSoup(){<br>
+  vegetables.forEach(item=> chop(item))<br>
+  meats.forEach(item=> chop(item))<br>
+  console.log("Cooked and boiled Everything")<br>
+  console.log("Soup is Ready")<br>
+}
+</div>
+
+<p>Now we have a single function/instruction we can tell our robot chef to use.</p>
+<p>It'll chop all the meat in the meats container(array), veges in the vegetables container(array) and cook and boil everything.</p>
+<p>When we run prepareSoup() we'll get:
+<br>
+<br>
+"Chopped Potato" 
+<br>
+"Chopped Onion"
+<br>
+"Chopped Carrot"
+<br>
+"Chopped Capsicum"
+<br>
+"Chopped Beef"
+<br>
+"Chopped Pork"
+<br>
+"Cooked and boiled Everything"
+<br>
+"Soup is Ready"
+<br>
+<br>
+</p>
+
+    <div class="exit-link">
+      <a href="../index.html">Back to Index </a>
+    </div>
+
+  </body>
+</html>

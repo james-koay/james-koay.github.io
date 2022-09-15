@@ -24,34 +24,35 @@
 
     <h3>8th September 2022</h3>
     
-<p>Hello! in my previous <a href="html-css.html">tech blog</a>, i mentioned how Javascript is like the electrician when you're building a house.</p>
+<p>Hello! In my previous <a href="html-css.html">tech blog</a>, I mentioned how Javascript is like the electrician when you're building a house.</p>
 
 <p>The electrician wires up your house so that the lights turn on when you push a button.</p>
 
 <p>Well today i'll be trying to explain how Javascript works with HTML and CSS in abit more depth.</p>
 
-<p>So first of all, we have three separate files. The .html, .css, and the .js files.</p>
+<p>First of all, we have three separate files. The .html, .css, and the .js files.</p>
 <p>But how do they talk to each other? Within the HTML file, there are links to whatever .css and .js files that it uses.</p>
-<p>Your web browser reads these links and creates a DOM; Document Object Model, and applies the styling from the CSS file and runs the code in the Javascript file.</p>
+<p>Your web browser reads these links and creates a DOM; a Document Object Model, and applies the styling from the CSS file and runs the code in the Javascript file.</p>
 <p>The DOM translates the html file so that it's elements are represented in a way that can be read by the Javascript code - as objects and nodes with a tree-like structure</p>
 <p>This tree-like structure acts like a map for objects so that the Javascript file knows where to find things.</p>
 
-<p>For example, lets say the DOM was a forest and we want to reference a specific leaf on a tree.</p>
+<p>For example, lets say the DOM is a forest and we want to reference a specific leaf on a tree.</p>
 
 <p>It's kind of hard to point out which leaf you're referring to... so we have to describe it like this:</p>
-<p>"It's the 2nd leaf on the 4th branch of tree number 3." We'd denote that in javascript kinda like this: 'tree3.branch4.leaf2'</p>
+<p>"It's the 2nd leaf on the 4th branch of tree number 3."</p>
+<p>We'd denote that in javascript kinda like this: 'tree3.branch4.leaf2'</p>
 
 <br>
 
 <h1>Javascript Programming</h1>
 
-<p>So now that you kinda know how Javascript references things. Lets talk about how the Javascript code works.</p>
-<p>The Javascript code is kinda like the instructions on a recipe. </p>
-<p>How the code is usually read is called the 'Control Flow'.</p>
-<p>It usually reads and executes from top to bottom until it reaches special instrucions like a loop or conditional statement.</p>
-
-<p>Say we have a robot chef. And we want to tell it how to make some hearty soup.</p>
-<p>First need the ingredients. Each ingredient would be an 'Object', and we'll put it into a array called 'vegetables'.</p>
+<p>So now that you kinda know how Javascript references things. Lets talk about how the Javascript code runs.</p>
+<p>The order in which the code is read and executed is called the 'Control Flow'.</p>
+<p>It's usually from top to bottom until it reaches special instrucions like a loop, function or conditional statement;</p>
+<p>in which case can be like a 'pick your own adventure' book, where you jump and skip pages as directed.</p>
+<p>But lets say we have a robot chef. And we want to tell it how to make some hearty soup.</p>
+<p>So lets write some Javascript code. It'll be like the instructions on a recipe that we'll give to our robot chef.</p>
+<p>First we need some ingredients. Each ingredient will be an 'Object', and we'll put it into an array called 'vegetables'.</p>
 <p>An array is basically a container for objects. But it can also contain more arrays; like a box inside a box.</p>
 
 <div class="codeblock">
@@ -82,7 +83,7 @@ console.log(result)
 <p>We can create a loop:</p>
 
 <div class="codeblock">
-  vegetables.forEach(vegetable=> chop(vegetable))
+  vegetables.forEach(item=> chop(item))
   </div>
 
 <p>This loop will execute the chop function for each item in the vegetable list. It will return in our console:
@@ -110,7 +111,7 @@ function prepareSoup(){<br>
 }
 </div>
 
-<p>Now we have a single function/instruction we can tell our robot chef to use.</p>
+<p>Now we have a single function/command we can tell our robot chef to prepare soup.</p>
 <p>It'll chop all the meat in the meats container(array), veges in the vegetables container(array) and cook and boil everything.</p>
 <p>When we run prepareSoup() we'll get:
 <br>
@@ -129,7 +130,7 @@ function prepareSoup(){<br>
 <br>
 "Cooked and boiled Everything"
 <br>
-"Soup is Ready"
+"Soup is Ready!"
 <br>
 <br>
 </p>

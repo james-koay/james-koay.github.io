@@ -173,7 +173,7 @@ h1{
 
   .tree{
     visibility: hidden;
-    position:absolute;
+    position:relative;
   }
 }
 
@@ -188,6 +188,7 @@ h1{
     display: inline-block;
     height:200px;
     width:200px;
+    position:relative;
   }
 
 }
